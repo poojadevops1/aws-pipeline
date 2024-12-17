@@ -17,8 +17,8 @@ phases:
       - aws --version
       - echo $AWS_DEFAULT_REGION
       # Use `get-login-password` instead of deprecated `get-login`
-      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin 535002851105.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
-      - REPOSITORY_URI=535002851105.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/aws-ecs-docker
+      - aws ecr get-login-password --region $AWS_DEFAULT_REGION | docker login --username AWS --password-stdin 061051222584.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com
+      - REPOSITORY_URI=061051222584.dkr.ecr.$AWS_DEFAULT_REGION.amazonaws.com/jenkisn-repo
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
 
